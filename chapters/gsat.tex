@@ -1,0 +1,37 @@
+\section{GSAT}
+
+For the GSAT experiment the following parameters were used
+
+\begin{itemize}
+  \item 100 executions
+  \item 10 restarts limit
+  \item 1000 iterations limit
+  \item tabu max length of 5
+\end{itemize}
+
+The following files were used 
+
+\begin{itemize}
+  \item uf20-020.cnf
+  \item uf20-021.cnf
+\end{itemize}
+
+The results are outlined in the following table
+
+% Please add the following required packages to your document preamble:
+% \usepackage{graphicx}
+% \usepackage[table,xcdraw]{xcolor}
+% If you use beamer only pass "xcolor=table" option, i.e. \documentclass[xcolor=table]{beamer}
+\begin{table}[H]
+\resizebox{\textwidth}{!}{%
+\begin{tabular}{llllll}
+\hline
+\rowcolor[HTML]{FFFC9E} 
+File & Success Rate & Failure Rate & Avg Run time(s) & Max Run Time (s) & Min Run Time (s) \\ \hline
+\cellcolor[HTML]{FFFFC7}uf20-020.cnf & 30\% & 70\% & 195 & 230 & 0.07 \\
+\cellcolor[HTML]{FFFFC7}uf20-021.cnf & 45\% & 55\% & 158 & 214 & 0.02 \\ \hline
+\end{tabular}%
+}
+\end{table}
+
+Overall the results for GSAT were dissapointing even with the tabu list. Increasing the max iterations limit does increase the affectiveness of the solution. For example an iteration limit of 10000 yields an almost 100\% success rate.
